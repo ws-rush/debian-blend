@@ -1,0 +1,18 @@
+# Install the core GNOME desktop
+gnome-core
+
+# Install Epiphany browser
+epiphany-browser
+
+# Remove Firefox by appending a minus sign.
+# This tells apt not to install it, even if recommended by gnome-core.
+firefox-esr-
+
+## install developer tools
+podman
+distrobox
+flatpak
+
+# Official Debian Theme
+desktop-base
+grub-theme-starfield

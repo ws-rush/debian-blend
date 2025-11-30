@@ -1,0 +1,27 @@
+# Live Build generated directories
+.build/
+binary/
+cache/
+chroot/
+local/
+
+# Live Build generated files
+*.iso
+*.img
+*.list
+*.packages
+*.contents
+*.files
+*.cpio.gz
+*.tar.gz
+*.tar.xz
+*.zsync
+*.map
+binary.modified_timestamps
+chroot.packages.install
+chroot.packages.live
+
+# Other common ignores
+.DS_Store
+*.swp
+*~

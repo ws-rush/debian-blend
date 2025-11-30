@@ -1,0 +1,74 @@
+#!/bin/sh
+
+set -e
+
+# Define source and destination
+# The chroot directory is available at 'chroot' in the project root during binary stage
+CHROOT_DIR="chroot"
+THEME_BASE="$CHROOT_DIR/usr/share/desktop-base"
+
+# Function to find the splash image
+find_splash() {
+    # 1. Try active-theme
+    if [ -f "$THEME_BASE/active-theme/grub/grub-4x3.png" ]; then
+        echo "$THEME_BASE/active-theme/grub/grub-4x3.png"
+        return
+    fi
+
+    # 2. Try specific themes (emerald, homeworld, joy, lines, softwaves)
+    for theme in emerald-theme homeworld-theme joy-theme lines-theme softwaves-theme; do
+        if [ -f "$THEME_BASE/$theme/grub/grub-4x3.png" ]; then
+            echo "$THEME_BASE/$theme/grub/grub-4x3.png"
+            return
+        fi
+    done
+
+    # 3. Try any theme
+    if [ -d "$THEME_BASE" ]; then
+        found=$(find "$THEME_BASE" -name "grub-4x3.png" | head -n 1)
+        if [ -n "$found" ]; then
+            echo "$found"
+            return
+        fi
+    fi
+}
+
+echo "Running 0500-copy-splash.hook.binary..."
+echo "Current directory: $(pwd)"
+echo "Directory contents:"
+ls -F
+
+SPLASH_SRC=$(find_splash)
+
+if [ -n "$SPLASH_SRC" ]; then
+    echo "Found splash image at $SPLASH_SRC"
+
+    # Handle GRUB
+    # Live-build expects splash at binary/boot/grub/splash.png for EFI boot
+    mkdir -p binary/boot/grub
+    cp "$SPLASH_SRC" binary/boot/grub/splash.png
+    echo "Copied to binary/boot/grub/splash.png"
+
+    # Handle Isolinux
+    # Live-build expects splash at binary/isolinux/splash.png for BIOS boot
+    mkdir -p binary/isolinux
+    cp "$SPLASH_SRC" binary/isolinux/splash.png
+    echo "Copied to binary/isolinux/splash.png"
+
+else
+    echo "Warning: Could not find any suitable splash image in $THEME_BASE"
+    echo "Ensure 'desktop-base' is installed and contains a theme."
+    
+    # Debugging: Check if chroot exists and what's in usr/share
+    if [ -d "$CHROOT_DIR" ]; then
+        echo "Chroot directory exists."
+        if [ -d "$CHROOT_DIR/usr/share" ]; then
+            echo "Contents of $CHROOT_DIR/usr/share:"
+            ls -F "$CHROOT_DIR/usr/share" | grep desktop || echo "No 'desktop' related items found in /usr/share"
+        else
+            echo "$CHROOT_DIR/usr/share does not exist."
+        fi
+    else
+        echo "Chroot directory $CHROOT_DIR does not exist."
+    fi
+fi
