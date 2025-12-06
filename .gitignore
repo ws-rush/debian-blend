@@ -9,6 +9,7 @@ local/
 *.iso
 *.img
 *.list
+!config/**/*.list
 *.packages
 *.contents
 *.files

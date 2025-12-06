@@ -1,5 +1,6 @@
 # Install the core GNOME desktop
 gnome-core
+gnome-shell-extension-manager
 
 # Install Epiphany browser
 epiphany-browser
@@ -12,7 +13,24 @@ firefox-esr-
 podman
 distrobox
 flatpak
+gnome-software-plugin-flatpak
 
 # Official Debian Theme
 desktop-base
 grub-theme-starfield
+
+# System Utilities (RAID, LVM, Filesystems)
+mdadm
+lvm2
+cryptsetup
+dosfstools
+ntfs-3g
+xfsprogs
+btrfs-progs
+
+# Calamares Installer
+calamares
+calamares-settings-debian
+
+# Exclude KDE system settings
+systemsettings-

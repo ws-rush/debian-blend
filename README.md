@@ -30,18 +30,43 @@ To add or remove packages, edit the package list file:
 
 Add the names of the packages you want to install, one per line. For example:
 
-```text
-# Core Desktop
+```
+# Install the core GNOME desktop
 gnome-core
+gnome-shell-extension-manager
 
-# Applications
+# Install Epiphany browser
 epiphany-browser
-# firefox-esr-  # Exclude firefox
 
-# Developer Tools
+# Remove Firefox by appending a minus sign.
+# This tells apt not to install it, even if recommended by gnome-core.
+firefox-esr-
+
+## install developer tools
 podman
 distrobox
 flatpak
+gnome-software-plugin-flatpak
+
+# Official Debian Theme
+desktop-base
+grub-theme-starfield
+
+# System Utilities (RAID, LVM, Filesystems)
+mdadm
+lvm2
+cryptsetup
+dosfstools
+ntfs-3g
+xfsprogs
+btrfs-progs
+
+# Calamares Installer
+calamares
+calamares-settings-debian
+
+# Exclude KDE system settings
+systemsettings-
 ```
 
 ## Package Caching
@@ -60,7 +85,7 @@ sudo systemctl enable --now apt-cacher-ng
 Configure `live-build` to use the local proxy:
 
 ```bash
-lb config --apt-http-proxy "http://127.0.0.1:3142"
+lb config --apt-http-proxy "http://localhost:3142/"
 ```
 
 ## Building the Image
@@ -91,7 +116,7 @@ If you need to rebuild the image (e.g., to update packages or apply configuratio
 
 **Step 1: Clean previous build artifacts**
 ```bash
-sudo lb clean
+sudo lb clean --all
 ```
 
 **Step 2: Regenerate configuration**
@@ -117,11 +142,19 @@ If the build fails with an error like `umount: .../chroot/proc: target is busy`,
 1. **Force Unmount:**
    ```bash
    sudo umount -l chroot/proc
+   sudo umount -l chroot/sys
    ```
 
 2. **Clean and Rebuild:**
    ```bash
-   sudo lb clean
+   sudo lb clean --all
    lb config
    sudo lb build
    ```
+
+## Resources
+
+- https://live-team.pages.debian.net/live-manual/
+- https://debian-install-notes.pages.dev/netinstall/live-build
+- https://gitlab.com/bitspur/community/linux-factory
+- https://debian-live-config.readthedocs.io/en/latest/custom.html
