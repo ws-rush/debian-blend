@@ -21,6 +21,7 @@ local/
 binary.modified_timestamps
 chroot.packages.install
 chroot.packages.live
+*.hash
 
 # Other common ignores
 .DS_Store
