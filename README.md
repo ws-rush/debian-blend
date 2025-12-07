@@ -28,46 +28,7 @@ lb config --distribution testing \
 To add or remove packages, edit the package list file:
 `config/package-lists/desktop.list.chroot`
 
-Add the names of the packages you want to install, one per line. For example:
-
-```
-# Install the core GNOME desktop
-gnome-core
-gnome-shell-extension-manager
-
-# Install Epiphany browser
-epiphany-browser
-
-# Remove Firefox by appending a minus sign.
-# This tells apt not to install it, even if recommended by gnome-core.
-firefox-esr-
-
-## install developer tools
-podman
-distrobox
-flatpak
-gnome-software-plugin-flatpak
-
-# Official Debian Theme
-desktop-base
-grub-theme-starfield
-
-# System Utilities (RAID, LVM, Filesystems)
-mdadm
-lvm2
-cryptsetup
-dosfstools
-ntfs-3g
-xfsprogs
-btrfs-progs
-
-# Calamares Installer
-calamares
-calamares-settings-debian
-
-# Exclude KDE system settings
-systemsettings-
-```
+Add the names of the packages you want to install, one per line.
 
 ## Package Caching
 

@@ -1,5 +1,6 @@
 # Install the core GNOME desktop
 gnome-core
+gnome-tweaks
 gnome-shell-extension-manager
 
 # Install Epiphany browser
@@ -18,6 +19,12 @@ gnome-software-plugin-flatpak
 # Official Debian Theme
 desktop-base
 grub-theme-starfield
+
+# UEFI Bootloader
+grub-efi-amd64
+grub-efi-amd64-signed
+shim-signed
+efibootmgr
 
 # System Utilities (RAID, LVM, Filesystems)
 mdadm
