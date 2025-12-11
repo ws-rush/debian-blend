@@ -53,16 +53,16 @@ export const BentoGridItem = ({
     >
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-soft-light pointer-events-none"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/3 to-transparent pointer-events-none" />
 
         {/* Header / Visual Section */}
         <div className={`
              relative w-full h-full min-h-[300px] lg:min-h-[400px] flex items-center justify-center overflow-hidden
              ${isHorizontal ? (isReverse ? 'lg:order-2' : 'lg:order-1') : ''}
-             bg-gradient-to-br from-[#0f0f0f] to-[#050505]
+             bg-linear-to-br from-[#0f0f0f] to-[#050505]
              ${!hasContent ? 'flex-1 min-h-full' : ''}
         `}>
-             <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:32px_32px]" />
+             <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[32px_32px]" />
              <div className="relative z-10 w-full h-full flex items-center justify-center p-8 group-hover/bento:scale-105 transition-transform duration-700 ease-out">
                 {header}
              </div>
@@ -75,7 +75,7 @@ export const BentoGridItem = ({
               ${isHorizontal ? (isReverse ? 'lg:order-1' : 'lg:order-2') : ''}
           `}>
                {icon && (
-                 <div className="mb-6 w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 text-white shadow-inner backdrop-blur-sm">
+                 <div className="mb-6 w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 text-white shadow-inner backdrop-blur-xs">
                     {icon}
                  </div>
                )}

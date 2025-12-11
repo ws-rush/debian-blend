@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 export const Laptop: React.FC = () => {
   return (
-    <div className="relative w-full max-w-[500px] aspect-[16/10] mx-auto perspective-[2000px]">
+    <div className="relative w-full max-w-[500px] aspect-16/10 mx-auto perspective-[2000px]">
       {/* Laptop Lid - Space Gray Aluminum */}
       <motion.div 
-        className="absolute inset-x-[12%] top-0 bottom-[10%] bg-[#2b2b2d] rounded-t-xl md:rounded-t-2xl shadow-2xl flex flex-col overflow-hidden border-[1px] border-[#3a3a3c]"
+        className="absolute inset-x-[12%] top-0 bottom-[10%] bg-[#2b2b2d] rounded-t-xl md:rounded-t-2xl shadow-2xl flex flex-col overflow-hidden border border-[#3a3a3c]"
         initial={{ rotateX: -30, opacity: 0 }}
         whileInView={{ rotateX: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -14,7 +14,7 @@ export const Laptop: React.FC = () => {
         style={{ transformOrigin: "bottom" }}
       >
         {/* Bezel */}
-        <div className="absolute inset-0 border-[6px] md:border-[8px] border-black rounded-t-lg z-20 pointer-events-none"></div>
+        <div className="absolute inset-0 border-[6px] md:border-8 border-black rounded-t-lg z-20 pointer-events-none"></div>
         
         {/* Notch */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 md:w-24 h-3 bg-black z-30 rounded-b-lg flex justify-center items-center">
@@ -25,7 +25,7 @@ export const Laptop: React.FC = () => {
         <div className="flex-1 bg-black relative overflow-hidden group">
           {/* Wallpaper */}
           <div className="absolute inset-0 bg-black">
-             <div className="absolute inset-0 bg-gradient-to-tr from-[#2c0b1e] via-[#000] to-[#1a050f] opacity-80"></div>
+             <div className="absolute inset-0 bg-linear-to-tr from-[#2c0b1e] via-black to-[#1a050f] opacity-80"></div>
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-debian-red/20 blur-[80px] rounded-full mix-blend-screen animate-pulse-slow"></div>
              
              <div className="absolute inset-0 flex items-center justify-center">
@@ -68,8 +68,8 @@ export const Laptop: React.FC = () => {
 
       {/* Laptop Base */}
       <div className="absolute bottom-0 left-0 right-0 h-[10%] bg-[#3a3a3c] rounded-b-xl md:rounded-b-2xl shadow-2xl z-20">
-        <div className="absolute top-0 inset-x-0 h-[1px] bg-[#1d1d1f]"></div>
-        <div className="w-20 md:w-32 h-1 bg-[#1d1d1f] mx-auto mt-0.5 rounded-b-md"></div>
+        <div className="absolute top-0 inset-x-0 h-px bg-apple-gray"></div>
+        <div className="w-20 md:w-32 h-1 bg-apple-gray mx-auto mt-0.5 rounded-b-md"></div>
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ const App: React.FC = () => {
                   layout="vertical"
                   title={
                      <span className="block text-center md:text-right">
-                        الاستقرار يلتقي <span className="text-transparent bg-clip-text bg-gradient-to-l from-debian-red to-orange-500">بالحداثة.</span>
+                        الاستقرار يلتقي <span className="text-transparent bg-clip-text bg-linear-to-l from-debian-red to-orange-500">بالحداثة.</span>
                      </span>
                   }
                   description={
@@ -45,7 +45,7 @@ const App: React.FC = () => {
                         <Laptop />
                      </div>
                   }
-                  className="min-h-[600px] border-debian-red/20 bg-gradient-to-b from-[#15050a] to-black"
+                  className="min-h-[600px] border-debian-red/20 bg-linear-to-b from-[#15050a] to-black"
                   icon={<Cpu className="h-8 w-8 text-debian-red" />}
                />
 
@@ -123,12 +123,12 @@ const App: React.FC = () => {
                            </div>
 
                            {/* Arrow */}
-                           <div className="hidden md:block h-0.5 w-12 bg-gradient-to-r from-gray-700 to-purple-500/50"></div>
+                           <div className="hidden md:block h-0.5 w-12 bg-linear-to-r from-gray-700 to-purple-500/50"></div>
 
                            {/* Current Version */}
                            <div className="flex flex-col items-center transform scale-110">
                               <div className="relative">
-                                 <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl blur opacity-40 animate-pulse"></div>
+                                 <div className="absolute -inset-1 bg-linear-to-br from-purple-500 to-blue-500 rounded-2xl blur-sm opacity-40 animate-pulse"></div>
                                  <div className="relative w-24 h-24 rounded-2xl bg-[#1a1a1a] border border-purple-500/30 flex items-center justify-center shadow-2xl">
                                     <span className="font-bold text-3xl text-white">49</span>
                                     <div className="absolute -top-3 -right-3 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center border-4 border-[#1a1a1a]">
@@ -142,7 +142,7 @@ const App: React.FC = () => {
                            </div>
 
                            {/* Arrow */}
-                           <div className="hidden md:block h-0.5 w-12 bg-gradient-to-l from-gray-700 to-purple-500/50"></div>
+                           <div className="hidden md:block h-0.5 w-12 bg-linear-to-l from-gray-700 to-purple-500/50"></div>
 
                            {/* Next Version */}
                            <div className="hidden md:flex flex-col items-center opacity-30 scale-75 blur-[1px]">
@@ -162,7 +162,7 @@ const App: React.FC = () => {
                   header={
                      <div className="w-full h-full flex flex-col items-center justify-center gap-6 py-12">
                         <div className="relative group/btn">
-                           <div className="absolute -inset-1 bg-gradient-to-r from-debian-red to-orange-600 rounded-full blur opacity-25 group-hover/btn:opacity-50 transition duration-1000 group-hover/btn:duration-200"></div>
+                           <div className="absolute -inset-1 bg-linear-to-r from-debian-red to-orange-600 rounded-full blur-sm opacity-25 group-hover/btn:opacity-50 transition duration-1000 group-hover/btn:duration-200"></div>
                            <button className="relative px-10 py-5 rounded-full bg-white text-black font-bold text-xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all">
                               <Download className="w-6 h-6" />
                               <span>تحميل ISO</span>
@@ -175,7 +175,7 @@ const App: React.FC = () => {
                         </div>
                      </div>
                   }
-                  className="border-white/10 bg-gradient-to-t from-[#151515] to-[#0a0a0a]"
+                  className="border-white/10 bg-linear-to-t from-[#151515] to-[#0a0a0a]"
                />
 
             </BentoGrid>
