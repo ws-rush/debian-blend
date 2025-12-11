@@ -6,6 +6,7 @@ import '@fontsource/readex-pro/400.css';
 import '@fontsource/readex-pro/500.css';
 import '@fontsource/readex-pro/600.css';
 import '@fontsource/readex-pro/700.css';
+import './styles/index.css';
 import App from './App.tsx';
 
 const rootElement = document.getElementById('root');
