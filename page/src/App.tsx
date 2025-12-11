@@ -52,7 +52,7 @@ const App: React.FC = () => {
                {/* Flatpak Native - Horizontal Layout */}
                <BentoGridItem
                   layout="horizontal"
-                  title="Flatpak Native"
+                  title="دعم Flatpak"
                   description="متجر تطبيقات متكامل ومعزول عن النظام. احصل على أحدث نسخ Telegram, Discord, VS Code وغيرها دون المساس باستقرار النظام الأساسي."
                   header={
                      <div className="relative w-full h-full flex items-center justify-center">
@@ -163,15 +163,20 @@ const App: React.FC = () => {
                      <div className="w-full h-full flex flex-col items-center justify-center gap-6 py-12">
                         <div className="relative group/btn">
                            <div className="absolute -inset-1 bg-linear-to-r from-debian-red to-orange-600 rounded-full blur-sm opacity-25 group-hover/btn:opacity-50 transition duration-1000 group-hover/btn:duration-200"></div>
-                           <button className="relative px-10 py-5 rounded-full bg-white text-black font-bold text-xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all">
+                           <a
+                              href="https://drive.google.com/drive/folders/1XhgeMOxMDEep2u5EmGFpxnKvaX08N6f0?usp=sharing"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="relative px-10 py-5 rounded-full bg-white text-black font-bold text-xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all"
+                           >
                               <Download className="w-6 h-6" />
                               <span>تحميل ISO</span>
-                           </button>
+                           </a>
                         </div>
                         <div className="flex gap-6 text-sm text-gray-500 font-mono">
-                           <span>MD5: 8f4b...2a1c</span>
+                           <span>Arch: amd64</span>
                            <span>•</span>
-                           <span>ISO Size: 3.2 GB</span>
+                           <span>ISO Size: 1.91 GB</span>
                         </div>
                      </div>
                   }
