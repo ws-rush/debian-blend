@@ -180,10 +180,10 @@ const App: React.FC = () => {
 
             </BentoGrid>
 
-            <footer className="max-w-7xl mx-auto mt-32 border-t border-white/5 pt-12 pb-10 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
+            <footer className="max-w-7xl mx-auto mt-32 border-t border-white/5 pt-12 pb-10 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
                <p>مشروع Debian Blend غير تابع لـ Debian رسميا، وأي تشابه في الأسماء فهو من وحي خيال المؤلف</p>
                <div className="flex gap-6 mt-4 md:mt-0">
-                  <a href="#" className="hover:text-white transition-colors">لماذا؟</a>
+                  <a href="https://wusaby.com/posts/debian-blend" className="hover:text-white transition-colors">لماذا؟</a>
                   <a href="https://github.com/ws-rush/debian-blend" className="hover:text-white transition-colors">GitHub</a>
                </div>
             </footer>
