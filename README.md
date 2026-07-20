@@ -49,6 +49,12 @@ Configure `live-build` to use the local proxy:
 lb config --apt-http-proxy "http://localhost:3142/"
 ```
 
+## Applying the Blend to an Installed Debian System
+
+The scripts in `scripts/` provide optional package installation and separate
+APT, Flatpak, and Podman helpers for an existing Debian installation. They are
+not run automatically by live-build.
+
 ## Building the Image
 
 To build the ISO image, run:
