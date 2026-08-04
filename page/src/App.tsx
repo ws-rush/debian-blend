@@ -22,7 +22,7 @@ const App: React.FC = () => {
                   <span className="text-xl font-bold tracking-tight">Debian Blend</span>
                </div>
                <button className="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors backdrop-blur-md border border-white/5">
-                  الإصدار v49.0
+                  الإصدار v50.0
                </button>
             </header>
 
@@ -130,7 +130,7 @@ const App: React.FC = () => {
                               <div className="relative">
                                  <div className="absolute -inset-1 bg-linear-to-br from-purple-500 to-blue-500 rounded-2xl blur-sm opacity-40 animate-pulse"></div>
                                  <div className="relative w-24 h-24 rounded-2xl bg-[#1a1a1a] border border-purple-500/30 flex items-center justify-center shadow-2xl">
-                                    <span className="font-bold text-3xl text-white">49</span>
+                                    <span className="font-bold text-3xl text-white">50</span>
                                     <div className="absolute -top-3 -right-3 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center border-4 border-[#1a1a1a]">
                                        <RefreshCw className="w-4 h-4 text-white animate-spin" style={{ animationDuration: '3s' }} />
                                     </div>
@@ -176,7 +176,7 @@ const App: React.FC = () => {
                         <div className="flex gap-6 text-sm text-gray-500 font-mono">
                            <span>Arch: amd64</span>
                            <span>•</span>
-                           <span>ISO Size: 1.91 GB</span>
+                           <span>ISO Size: 1.96 GB</span>
                         </div>
                      </div>
                   }

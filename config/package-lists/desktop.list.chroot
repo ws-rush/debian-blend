@@ -1,14 +1,19 @@
 # Install the core GNOME desktop
 gnome-core
-gnome-tweaks
+# Supplies fallback assets that GNOME 50's Adwaita theme inherits.
+adwaita-icon-theme-legacy
 gnome-shell-extension-manager
-
-# Install Epiphany browser
 epiphany-browser
+gnome-console
+papers
+
 
 # Remove Firefox by appending a minus sign.
 # This tells apt not to install it, even if recommended by gnome-core.
 firefox-esr-
+gnome-terminal-
+evince-
+
 
 ## install developer tools
 podman
@@ -16,8 +21,13 @@ distrobox
 flatpak
 gnome-software-plugin-flatpak
 
+## another tools
+unrar-free
+
 # Official Debian Theme
 desktop-base
+# Additional wallpapers registered in GNOME Settings.
+budgie-backgrounds
 grub-theme-starfield
 
 # UEFI Bootloader

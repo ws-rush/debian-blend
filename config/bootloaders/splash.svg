@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Debian Blend boot-screen artwork.
+  live-build substitutes @ARCHITECTURE@ while producing the BIOS (640x480)
+  and UEFI (800x600) PNG variants from this source file.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <defs>
+    <radialGradient id="background-glow" cx="25%" cy="18%" r="80%">
+      <stop offset="0%" stop-color="#2c0b1e"/>
+      <stop offset="42%" stop-color="#15050a"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <radialGradient id="bottom-glow" cx="80%" cy="100%" r="58%">
+      <stop offset="0%" stop-color="#d70a53" stop-opacity=".22"/>
+      <stop offset="65%" stop-color="#d70a53" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="480" fill="#050505"/>
+  <rect width="640" height="480" fill="url(#background-glow)"/>
+  <rect width="640" height="480" fill="url(#bottom-glow)"/>
+
+  <!-- Subtle product grid, taken from the site's card treatment. -->
+  <g fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="1">
+    <path d="M0 240H640M0 320H640M0 400H640"/>
+    <path d="M80 0V480M160 0V480M240 0V480M320 0V480M400 0V480M480 0V480M560 0V480"/>
+  </g>
+
+  <!-- Exact Debian Blend mark supplied from the landing page. -->
+  <svg x="42" y="58" width="148" height="148" viewBox="0 0 100 100" class="w-32 h-32 md:w-48 md:h-48 opacity-90 drop-shadow-[0_0_30px_rgba(215,10,83,0.4)]">
+    <defs>
+      <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff4f8b"></stop>
+        <stop offset="100%" stop-color="#d70a53"></stop>
+      </linearGradient>
+    </defs>
+    <path d="M50 5C25.147 5 5 25.147 5 50s20.147 45 45 45 45-20.147 45-45S74.853 5 50 5zm0 81c-19.882 0-36-16.118-36-36s16.118-36 36-36 36 16.118 36 36-16.118 36-36 36zm8.5-49.5c-3.038 0-5.5 2.462-5.5 5.5s2.462 5.5 5.5 5.5 5.5-2.462 5.5-5.5-2.462-5.5-5.5-5.5z" fill="url(#metal)"></path>
+    <path d="M50 23c-14.912 0-27 12.088-27 27s12.088 27 27 27 27-12.088 27-27h-4c0 12.706-10.294 23-23 23s-23-10.294-23-23 10.294-23 23-23v-4z" fill="url(#metal)" opacity="0.8"></path>
+  </svg>
+
+  <g font-family="DejaVu Sans, sans-serif">
+    <text x="220" y="88" fill="#f5f5f7" font-size="31" font-weight="700" letter-spacing="-.8">Debian Blend 50</text>
+    <text x="222" y="116" fill="#ff4f8b" font-size="11" font-weight="700" letter-spacing="2.2">STABILITY MEETS MODERNITY</text>
+    <rect x="222" y="137" width="330" height="1" fill="#ffffff" fill-opacity=".16"/>
+    <text x="222" y="165" fill="#f5f5f7" fill-opacity=".78" font-size="14">A modern Debian experience, built for everyday work.</text>
+    <text x="222" y="190" fill="#f5f5f7" fill-opacity=".5" font-size="11" letter-spacing=".7">LIVE SESSION  •  @ARCHITECTURE@</text>
+  </g>
+
+  <!-- Keep the lower centre visually clear for the boot menus. -->
+  <path d="M40 432H600" stroke="#ffffff" stroke-opacity=".1"/>
+  <circle cx="58" cy="432" r="3" fill="#d70a53"/>
+  <text x="72" y="436" fill="#f5f5f7" fill-opacity=".52" font-family="DejaVu Sans, sans-serif" font-size="10" letter-spacing=".5">DEBIAN BLEND</text>
+</svg>

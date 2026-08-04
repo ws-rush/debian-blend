@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+# GNOME 50's gnome-core meta-package requires Ptyxis.  Remove both only after
+# the desktop has been installed, retaining the explicitly requested Console.
+apt-get purge --yes ptyxis

@@ -71,16 +71,16 @@ LB_HDD_SIZE="auto"
 LB_HDD_PARTITION_START=""
 
 # Set iso author
-LB_ISO_APPLICATION="Debian Live"
+LB_ISO_APPLICATION="Debian Blend"
 
 # Set iso preparer
-LB_ISO_PREPARER="live-build @LB_VERSION@; https://salsa.debian.org/live-team/live-build"
+LB_ISO_PREPARER="Debian Blend; https://github.com/ws-rush/debian-blend"
 
 # Set iso publisher
-LB_ISO_PUBLISHER="Debian Live project; https://wiki.debian.org/DebianLive; debian-live@lists.debian.org"
+LB_ISO_PUBLISHER="Debian Blend; https://github.com/ws-rush/debian-blend"
 
 # Set iso volume (max 32 chars)
-LB_ISO_VOLUME="Debian testing @ISOVOLUME_TS@"
+LB_ISO_VOLUME="DEBIAN_BLEND_@ISOVOLUME_TS@"
 
 # Set jffs2 eraseblock size
 LB_JFFS2_ERASEBLOCK=""

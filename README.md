@@ -30,6 +30,11 @@ To add or remove packages, edit the package list file:
 
 Add the names of the packages you want to install, one per line.
 
+### Boot Screen
+
+The BIOS and UEFI boot menus use the Debian Blend theme in `config/bootloaders/`.
+See [`docs/boot-theme.md`](docs/boot-theme.md) to change its artwork, menu labels, or colours.
+
 ## Package Caching
 
 To speed up subsequent builds and avoid re-downloading packages, you can use `apt-cacher-ng`.
@@ -49,12 +54,6 @@ Configure `live-build` to use the local proxy:
 lb config --apt-http-proxy "http://localhost:3142/"
 ```
 
-## Applying the Blend to an Installed Debian System
-
-The scripts in `scripts/` provide optional package installation and separate
-APT, Flatpak, and Podman helpers for an existing Debian installation. They are
-not run automatically by live-build.
-
 ## Building the Image
 
 To build the ISO image, run:
@@ -63,14 +62,14 @@ To build the ISO image, run:
 sudo lb build
 ```
 
-This process will take some time as it downloads packages and constructs the filesystem. The final ISO will be generated in the current directory (e.g., `live-image-amd64.hybrid.iso`).
+This process will take some time as it downloads packages and constructs the filesystem. The final ISO will be generated in the current directory (e.g., `debian-blend-amd64.hybrid.iso`).
 
 ## Testing the Image
 
 You can test the generated ISO using QEMU without rebooting your machine.
 
 ```bash
-qemu-system-x86_64 -m 4G -enable-kvm -cdrom live-image-amd64.hybrid.iso
+qemu-system-x86_64 -m 4G -enable-kvm -cdrom debian-blend-amd64.hybrid.iso
 ```
 
 *   **-m 4G**: Allocates 4GB of RAM to the virtual machine.

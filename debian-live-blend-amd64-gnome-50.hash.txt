@@ -1,0 +1,8 @@
+## md5
+e37edc56931c988485565aa741e23e46  debian-live-blend-amd64-gnome-50.iso
+
+## sha256
+176e5a7eec894bbb1975bd4d09ba3a5ada996ad703b63a6ef5ef7a21f539b6a1  debian-live-blend-amd64-gnome-50.iso
+
+## sha512
+a3804255614937cde618315f544f7e8871a955923c19e4657ce9b0879f157235859290446fca89d2cccd8c332fd5eb46f85146d0cb1666fcc53832d1fc1cd1a7  debian-live-blend-amd64-gnome-50.iso
