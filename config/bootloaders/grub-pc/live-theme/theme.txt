@@ -7,29 +7,29 @@ terminal-font: "Unifont Regular 16"
 
 # Help bar at the bottom.
 + label {
-        top = 100%-50
+        top = 100%-38
         left = 0
         width = 100%
         height = 20
         text = "@KEYMAP_SHORT@"
         align = "center"
-        color = "#f5f5f7"
+        color = "#c8c5cc"
         font = "Unifont Regular 16"
 }
 
-# Keep menu entries in the clear lower section of the artwork.
+# Keep menu entries inside the framed lower section of the artwork.
 + boot_menu {
-        left = 10%
-        width = 80%
-        top = 52%
-        height = 48%-80
+        left = 8%
+        width = 84%
+        top = 48%
+        height = 36%
         item_color = "#b7b4ba"
         item_font = "Unifont Regular 16"
         selected_item_color = "#ffffff"
         selected_item_font = "Unifont Regular 16"
-        item_height = 16
-        item_padding = 0
-        item_spacing = 4
+        item_height = 22
+        item_padding = 4
+        item_spacing = 6
         icon_width = 0
         icon_height = 0
         item_icon_space = 0
@@ -38,13 +38,13 @@ terminal-font: "Unifont Regular 16"
 + progress_bar {
         id = "__timeout__"
         left = 15%
-        top = 100%-80
-        height = 16
+        top = 100%-64
+        height = 12
         width = 70%
         font = "Unifont Regular 16"
-        text_color = "#050505"
-        fg_color = "#ff4f8b"
-        bg_color = "#2d2d2d"
-        border_color = "#ff4f8b"
+        text_color = "#eceef2"
+        fg_color = "#d70a53"
+        bg_color = "#1c1d23"
+        border_color = "#343742"
         text = "@TIMEOUT_NOTIFICATION_LONG@"
 }

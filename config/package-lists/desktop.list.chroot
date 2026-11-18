@@ -6,6 +6,7 @@ gnome-shell-extension-manager
 epiphany-browser
 gnome-console
 papers
+gnome-music
 
 
 # Remove Firefox by appending a minus sign.
@@ -13,6 +14,7 @@ papers
 firefox-esr-
 gnome-terminal-
 evince-
+imagemagick-7-common-
 
 
 ## install developer tools
@@ -23,12 +25,17 @@ gnome-software-plugin-flatpak
 
 ## another tools
 unrar-free
+bash-completion
+wl-clipboard
+
+# Performance & Responsiveness
+thermald
+
+# Hardware & Media Acceleration
+va-driver-all
 
 # Official Debian Theme
 desktop-base
-# Additional wallpapers registered in GNOME Settings.
-budgie-backgrounds
-grub-theme-starfield
 
 # UEFI Bootloader
 grub-efi-amd64

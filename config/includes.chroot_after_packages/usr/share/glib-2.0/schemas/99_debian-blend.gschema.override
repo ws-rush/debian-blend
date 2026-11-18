@@ -1,0 +1,8 @@
+[org.gnome.desktop.background]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/fold-l.jxl'
+picture-uri-dark='file:///usr/share/backgrounds/gnome/fold-d.jxl'
+
+[org.gnome.desktop.screensaver]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/fold-l.jxl'
